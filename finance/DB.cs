@@ -28,7 +28,7 @@ namespace finance
 
         public string GetMostExpensiveCategory()
         {
-            return Expenses
+            return Expenses 
                 .GroupBy(e => e.Category)
                 .OrderByDescending(g => g.Sum(e => e.Amount))
                 .FirstOrDefault()?.Key ?? "Неизвестно";
